@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="inputText">
+        <hello-world v-bind:message="inputText"></hello-world>
+        <button-counter></button-counter>
+        <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></blog-post>
+        <p>{{ message }}</p>
+        <emit-event v-on:from-child="receiveMessage"></emit-event>
+    </div>
+
+    <div id="app2">
+        <hello-world></hello-world>
+        <hello-view></hello-view>
+        <!-- slotテスト↓↓↓↓↓ -->
+        <hello-view>JavaScript</hello-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

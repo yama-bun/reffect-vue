@@ -1,0 +1,9 @@
+.active {
+    transform:translateX(-110%)
+}
+h1 {
+    color: #fff;
+    background-color: red;
+    user-select: none;
+    transition: all 0.3s;
+}
